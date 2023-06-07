@@ -44,5 +44,10 @@
     @include font($fw: 600, $fs: 13px, $lh: 16px, $c: var(--light-color));
     padding: 42px 0;
     text-transform: uppercase;
+    transition: color $t-slow;
+
+    &:hover {
+      color: var(--blue-color);
+    }
   }
 }
