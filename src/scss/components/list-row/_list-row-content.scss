@@ -2,6 +2,32 @@
   &__item {
     @include flex($fd: column, $ai: center);
     transition: $t-std;
+
+    &--relic {
+      position: relative;
+
+      @include media-md {
+        &:not(:nth-child(n + 4))::before {
+          content: "";
+          @include absolute($t: 47px, $r: -55px);
+          background-image: url(../img/relic.svg);
+          background-repeat: no-repeat;
+          width: 110px;
+          height: 6px;
+        }
+      }
+
+      @include media-lg {
+        &:not(:last-child)::before {
+          content: "";
+          @include absolute($t: 47px, $r: -55px);
+          background-image: url(../img/relic.svg);
+          background-repeat: no-repeat;
+          width: 110px;
+          height: 6px;
+        }
+      }
+    }
   }
 
   &__img {

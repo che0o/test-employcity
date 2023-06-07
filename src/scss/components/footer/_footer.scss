@@ -2,8 +2,13 @@
   padding: 20px 0;
   background-color: var(--footer-background);
 
+  @include media-lg {
+    padding: 0;
+  }
+
   &__row {
     @include flex($fd: column);
+
     @include media-lg {
       @include flex($fd: row, $jc: space-between);
     }
@@ -17,8 +22,18 @@
 
   &__item {
     padding: 10px 0;
+    position: relative;
+
     @include media-lg {
       padding: 32px 0;
+
+      &:not(:last-child)::before {
+        content: "";
+        @include absolute($t: 40%, $r: -54px);
+        width: 1px;
+        height: 18px;
+        background-color: #c3c3c3;
+      }
     }
   }
 }
