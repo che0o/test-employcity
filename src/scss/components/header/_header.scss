@@ -1,0 +1,16 @@
+.header {
+  @include fixed($t: 0, $r: 0, $l: 0);
+  background: var(--header-background);
+  z-index: 5;
+
+  &__row {
+    @include flex($jc: space-between);
+    padding: 22px 0;
+  }
+
+  @include media-sm {
+    &__row {
+      padding: 0;
+    }
+  }
+}

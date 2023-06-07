@@ -1,0 +1,18 @@
+@mixin flex(
+  $fd: null,
+  $fw: null,
+  $ai: center,
+  $jc: flex-start,
+  $fs: null,
+  $fg: null,
+  $cg: null
+) {
+  display: flex;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-shrink: $fs;
+  flex-grow: $fg;
+  column-gap: $cg;
+}

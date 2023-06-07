@@ -1,0 +1,32 @@
+.btn {
+  position: relative;
+  @include flex($jc: center, $fs: 0);
+  display: inline-flex;
+  @include font($fs: 13px, $lh: 16px, $fw: 400);
+  border-radius: $br-std;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  white-space: normal;
+  text-align: center;
+  cursor: pointer;
+  transition: color $t-std, border $t-std, background-color $t-std;
+
+  @include media-lg {
+    white-space: nowrap;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

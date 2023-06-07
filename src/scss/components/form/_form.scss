@@ -1,0 +1,29 @@
+.form {
+  &__row {
+    @include flex($fd: column);
+    row-gap: 30px;
+    max-width: 370px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include media-lg {
+      @include flex($fd: row, $jc: space-between, $cg: 30px);
+      row-gap: 0;
+      max-width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &--center {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 370px;
+    padding-top: 20px;
+  }
+}

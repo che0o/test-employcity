@@ -1,0 +1,24 @@
+.footer {
+  padding: 20px 0;
+  background-color: var(--footer-background);
+
+  &__row {
+    @include flex($fd: column);
+    @include media-lg {
+      @include flex($fd: row, $jc: space-between);
+    }
+  }
+
+  &__info {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &__item {
+    padding: 10px 0;
+    @include media-lg {
+      padding: 32px 0;
+    }
+  }
+}

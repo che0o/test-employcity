@@ -1,0 +1,12 @@
+.btn {
+  &--sm {
+    height: 43px;
+    min-width: 183px;
+    padding: 15px 32px;
+  }
+
+  &--wide {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+}

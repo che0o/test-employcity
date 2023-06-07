@@ -1,0 +1,9 @@
+.logo {
+  @include flex($fs: 0);
+  width: 180px;
+  height: 35px;
+
+  @include media-sm {
+    width: 247px;
+  }
+}

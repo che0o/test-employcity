@@ -1,0 +1,32 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "typography";
+
+// подключения компонентов страницы
+@import "./components/logo";
+@import "./components/section";
+//Screens
+@import "./components/first-screen";
+@import "./components/second-screen";
+//Header
+@import "./components/header/header";
+@import "./components/header/menu";
+@import "./components/header/burger";
+//Footer
+@import "./components/footer/footer";
+@import "./components/footer/list-pay";
+@import "./components/footer/social";
+//Buttons
+@import "./components/buttons/btn.scss";
+@import "./components/buttons/button-sizes";
+@import "./components/buttons/button-types";
+//List-row
+@import "./components/list-row/list-row-content";
+@import "./components/list-row/row";
+//Form
+@import "./components/form/form";
+@import "./components/form/input";
+@import "./components/form/select";

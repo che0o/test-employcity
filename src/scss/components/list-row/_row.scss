@@ -1,0 +1,61 @@
+.list-row {
+  @include flex($ai: flex-start, $fw: wrap, $jc: center);
+  // margin-left: -15px;
+  // margin-right: -15px;
+
+  @mixin item-width($width) {
+    .list-row__item {
+      width: #{$width};
+    }
+  }
+
+  @each $media,
+    $val
+      in (
+        "init": "0",
+        "xs": "576",
+        "sm": "768",
+        "md": "992",
+        "lg": "1200",
+        "xl": "1400",
+        "xxl": "1600"
+      )
+  {
+    &--#{$media}-1 {
+      @include media(#{$val}) {
+        @include item-width("100%");
+      }
+    }
+
+    &--#{$media}-2 {
+      @include media(#{$val}) {
+        @include item-width("50%");
+      }
+    }
+
+    &--#{$media}-3 {
+      @include media(#{$val}) {
+        justify-content: flex-start;
+        @include item-width("calc(100% / 3 - 15px)");
+      }
+    }
+
+    &--#{$media}-4 {
+      @include media(#{$val}) {
+        @include item-width("25%");
+      }
+    }
+
+    &--#{$media}-5 {
+      @include media(#{$val}) {
+        @include item-width("20%");
+      }
+    }
+
+    &--#{$media}-6 {
+      @include media(#{$val}) {
+        @include item-width("16.6666%");
+      }
+    }
+  }
+}

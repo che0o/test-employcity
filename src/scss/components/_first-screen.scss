@@ -1,0 +1,27 @@
+.first-screen {
+  padding: 120px 0 100px;
+
+  @include media-sm {
+    padding: 214px 0 204px;
+  }
+
+  &__title {
+    max-width: 780px;
+    margin-bottom: 80px;
+  }
+
+  &__description {
+    margin-bottom: 80px;
+  }
+
+  &__btns {
+    @include flex($fd: column);
+    row-gap: 30px;
+    max-width: 396px;
+
+    @include media-xs {
+      @include flex($fd: row, $jc: space-between);
+      row-gap: 0;
+    }
+  }
+}

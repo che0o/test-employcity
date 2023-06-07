@@ -1,0 +1,48 @@
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(16, 16, 29, 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include media-sm {
+    position: initial;
+    z-index: 0;
+    overflow: auto;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__list {
+    @include flex($fd: column, $jc: center);
+    width: 100%;
+    height: 100%;
+  }
+
+  @include media-sm {
+    &__list {
+      @include flex($fd: row, $cg: 60px);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    @include font($fw: 600, $fs: 13px, $lh: 16px, $c: var(--light-color));
+    padding: 42px 0;
+    text-transform: uppercase;
+  }
+}

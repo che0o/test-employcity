@@ -1,0 +1,37 @@
+.btn {
+  &--light {
+    border: 1px solid #6f6d7b;
+
+    &:not([disabled]):hover {
+      background: rgba(23, 23, 51, 0.05);
+    }
+
+    &:not([disabled]):active {
+      background: rgba(23, 23, 51, 0.1);
+    }
+
+    &:disabled {
+      background: transparent;
+      color: $c-gray;
+    }
+  }
+
+  &--blue {
+    background: $c-blue;
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+
+    &:not([disabled]):hover {
+      background: $c-hover-blue;
+    }
+
+    &:not([disabled]):active {
+      background: $c-active-blue;
+    }
+
+    &:disabled {
+      background: rgba($c-gray, 10%);
+      color: $c-gray;
+    }
+  }
+}

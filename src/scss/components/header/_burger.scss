@@ -1,0 +1,25 @@
+.burger {
+  @include burger;
+
+  @include media-sm {
+    display: none;
+  }
+}
+
+.burger-close {
+  position: absolute;
+  right: var(--container-offset);
+  top: 18px;
+  border: 1px solid var(--light-color);
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  background-image: url("../img/close.svg");
+  background-position: center;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+
+  @include media-sm {
+    display: none;
+  }
+}

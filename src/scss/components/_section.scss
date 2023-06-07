@@ -1,0 +1,27 @@
+.section {
+  overflow: hidden;
+
+  &--dark {
+    background-color: var(--dark-background);
+  }
+
+  &--bg-1 {
+    background-image: url(../img/first-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  &--bg-2 {
+    background-image: url(../img/second-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,28 @@
+.list-row {
+  &__item {
+    @include flex($fd: column, $ai: center);
+    transition: $t-std;
+  }
+
+  &__img {
+    @include flex($jc: center, $ai: center);
+    width: 100px;
+    height: 100px;
+    background: var(--blue-color);
+    border: 5px solid #286690;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    max-width: 38px;
+    max-height: 41px;
+  }
+
+  &__desc {
+    display: inline-block;
+    @include font($fw: 400, $fs: 16px, $lh: 19px, $c: var(--light-color));
+    text-align: center;
+    max-width: 188px;
+  }
+}

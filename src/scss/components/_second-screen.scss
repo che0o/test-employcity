@@ -1,0 +1,29 @@
+.second-screen {
+  padding: 80px 0 100px;
+
+  @include media-sm {
+    padding: 120px 0 150px;
+  }
+
+  &__title {
+    @include flex($jc: center);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    @include flex($jc: center);
+    width: 100%;
+    margin-bottom: 80px;
+
+    span {
+      @include font($fw: 400, $fs: 18px, $lh: 22px, $c: var(--secondary-color));
+      text-align: center;
+    }
+  }
+
+  &__list {
+    margin-bottom: 80px;
+  }
+}

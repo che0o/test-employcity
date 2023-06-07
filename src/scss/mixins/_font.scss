@@ -1,0 +1,17 @@
+@mixin font(
+  $ff: null,
+  $fs: null,
+  $lh: null,
+  $fw: null,
+  $fy: null,
+  $c: null,
+  $ls: null
+) {
+  font-family: $ff;
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+  font-style: $fy;
+  color: $c;
+  letter-spacing: $ls;
+}

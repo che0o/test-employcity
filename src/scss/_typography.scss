@@ -1,0 +1,81 @@
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  @include font($fw: 700, $fs: 38px, $lh: 48px, $c: var(--dark-color));
+  text-transform: uppercase;
+
+  span {
+    @include font($fw: 700, $fs: 38px, $lh: 48px, $c: var(--blue-color));
+    text-transform: uppercase;
+  }
+
+  @include media-md {
+    font-size: 48px;
+    line-height: 58px;
+
+    span {
+      font-size: 48px;
+      line-height: 58px;
+    }
+  }
+}
+
+h2 {
+  @include font($fw: 800, $fs: 28px, $lh: 35px);
+  text-transform: uppercase;
+
+  span {
+    @include font($fw: 800, $fs: 28px, $lh: 35px, $c: var(--blue-color));
+  }
+
+  @include media-md {
+    line-height: 43px;
+    font-size: 36px;
+
+    span {
+      line-height: 43px;
+      font-size: 36px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+ul:not([class]) {
+  li {
+    position: relative;
+    padding-left: 24.94px;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &::before {
+      content: "";
+      width: 4.94px;
+      height: 1.51px;
+      background-color: var(--dark-color);
+      @include absolute($t: 50%, $l: 10px);
+    }
+  }
+
+  span {
+    @include font($fw: 400, $fs: 20px, $lh: 24px, $c: var(--dark-color));
+  }
+}
+
+span {
+  @include font($fw: 700, $fs: 20px, $lh: 24px, $c: var(--dark-color));
+  margin-bottom: 10px;
+}
